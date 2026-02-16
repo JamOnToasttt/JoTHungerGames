@@ -1,0 +1,547 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:trident",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:loyalty": 3,
+                  "minecraft:impaling": 3,
+                  "minecraft:channeling": 1
+                },
+                "minecraft:custom_name": {
+                  "text": "Big Trident",
+                  "type": "text",
+                  "color": "aqua",
+                  "bold": true
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "it's really big",
+                    "type": "text",
+                    "color": "blue"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_leggings",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:protection": 1,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:damage": 465,
+                "minecraft:custom_name": {
+                  "text": "Shattered Diamond Leggings",
+                  "type": "text",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:protection": 1,
+                  "minecraft:thorns": 2
+                },
+                "minecraft:damage": 498,
+                "minecraft:custom_name": {
+                  "text": "Shattered Diamond Chestplate",
+                  "type": "text",
+                  "italic": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:fire_aspect": 2
+                },
+                "minecraft:custom_name": {
+                  "text": "Greased Iron Sword",
+                  "type": "text",
+                  "italic": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_spear",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:fire_aspect": 2
+                },
+                "minecraft:custom_name": {
+                  "text": "Greased Iron Spear",
+                  "type": "text",
+                  "italic": false
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "min": 1,
+                  "max": 3
+                },
+                "minecraft:lunge": {
+                  "min": 1,
+                  "max": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:protection": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:protection": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:bow",
+              "weight": 12,
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:enchantments": {
+                      "minecraft:power": 4,
+                      "punch": 3,
+                      "minecraft:flame": 2
+                    },
+                    "minecraft:custom_name": {
+                      "text": "super duper awesomer even more really cool bow",
+                      "type": "text",
+                      "color": "gold",
+                      "bold": true
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:tipped_arrow",
+              "weight": 12,
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 2,
+                    "max": 5
+                  }
+                },
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:potion_contents": {
+                      "potion": "minecraft:strong_poison",
+                      "custom_color": 6018387
+                    },
+                    "minecraft:custom_name": {
+                      "text": "Poisoned Arrow",
+                      "type": "text",
+                      "color": "#2F9401",
+                      "italic": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:movement_speed",
+                    "id": "hg:speed_boots",
+                    "amount": 1.5,
+                    "operation": "add_multiplied_base",
+                    "slot": "feet"
+                  }
+                ],
+                "minecraft:custom_name": {
+                  "text": "Swift Boots",
+                  "type": "text",
+                  "color": "red",
+                  "bold": true
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "run like the wind",
+                    "type": "text",
+                    "color": "white"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "text": "Sword of Champions",
+                  "type": "text",
+                  "color": "dark_red",
+                  "bold": true
+                },
+                "minecraft:damage": 1556
+              }
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "min": 3,
+                  "max": 5
+                },
+                "minecraft:fire_aspect": {
+                  "min": 0,
+                  "max": 2
+                },
+                "minecraft:knockback": {
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:slime_ball",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "minecraft:knockback": 10
+                },
+                "minecraft:custom_name": {
+                  "text": "Slimeball",
+                  "type": "text",
+                  "color": "green",
+                  "bold": true
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "goopy...",
+                    "type": "text",
+                    "color": "dark_green"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:crossbow",
+              "weight": 7,
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:custom_name": {
+                      "text": "Tranquilizer Gun",
+                      "type": "text",
+                      "color": "gray",
+                      "bold": true
+                    },
+                    "minecraft:lore": [
+                      {
+                        "text": "sweet dreams...",
+                        "type": "text",
+                        "color": "#e1b6f6"
+                      }
+                    ],
+                    "minecraft:charged_projectiles": [
+                      {
+                        "id": "minecraft:tipped_arrow",
+                        "count": 1,
+                        "components": {
+                          "minecraft:potion_contents": {
+                            "potion": "minecraft:strong_slowness",
+                            "custom_color": 8479619,
+                            "custom_effects": [
+                              {
+                                "id": "minecraft:slowness",
+                                "amplifier": 5,
+                                "duration": 200,
+                                "show_particles": true,
+                                "show_icon": true
+                              }
+                            ]
+                          },
+                          "minecraft:max_damage": 2,
+                          "minecraft:custom_name": {
+                            "text": "Tranquilizer Dart",
+                            "type": "text",
+                            "color": "#e1b6f6",
+                            "italic": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:tipped_arrow",
+              "weight": 7,
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:potion_contents": {
+                      "potion": "minecraft:strong_slowness",
+                      "custom_color": 8479619,
+                      "custom_effects": [
+                        {
+                          "id": "minecraft:slowness",
+                          "amplifier": 5,
+                          "duration": 200,
+                          "show_particles": true,
+                          "show_icon": true
+                        }
+                      ]
+                    },
+                    "minecraft:custom_name": {
+                      "text": "Tranquilizer Dart",
+                      "type": "text",
+                      "color": "#e1b6f6",
+                      "italic": false
+                    }
+                  }
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 0,
+                    "max": 2
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 0,
+        "max": {
+          "min": 0,
+          "max": 2
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 300,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 100,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_lazuli",
+          "weight": 150,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "weight": 300,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 150,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:baked_potato",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_beef",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

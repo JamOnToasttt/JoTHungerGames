@@ -1,0 +1,66 @@
+getSurfaceBlocks-ignored-materials:
+  - AIR
+  - ACACIA_LEAVES
+  - AZALEA_LEAVES
+  - FLOWERING_AZALEA_LEAVES
+  - BIRCH_LEAVES
+  - DARK_OAK_LEAVES
+  - JUNGLE_LEAVES
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - SHORT_GRASS
+  - TALL_GRASS
+  # Add any other materials you want to ignore.
+
+music style: minecraft # set to "real" if you have the non-noteblock version
+
+effects master controls:
+  enabled: true # whether these controls are enabled
+  duration: 10 # how many seconds all applicable effects will run for, if enabled
+
+effects:
+  beast:
+    duration: 60 # how many seconds the effect will last before resolving
+  blood_rain:
+    duration: 60 # how many seconds the effect will last before resolving
+  extreme_cold:
+    duration: 60 # how many seconds the effect will last before resolving
+  firestorm: # RECOMMENDED TO TURN FIRE SPREAD GAMERULE OFF
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 1.5 # how many seconds between fire spread
+    autoClear: true # whether the fire automatically clears itself after finishing spreading, or waits for the duration
+  insects:
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 4 # how many seconds between insect spawns
+    maxInsects: 3 # how many insects spawn each interval
+  jabberjays:
+    duration: 60 # how many seconds the effect will last before resolving
+  lightning:
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 1  # how many seconds between strikes
+    strikePercentage: 0.01 # percentage of blocks in a segment that will be struck each interval
+  paralysing_fog:
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 3 # how many seconds between fog spread
+    height: 5 # how many blocks above the surface the fog will spread to
+  poison_flowers:
+    duration: 60 # how many seconds the effect will last before resolving
+  spiders:
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 4 # how many seconds between spider spawns
+    maxSpiders: 3 #how many spiders spawn each interval
+  wasps:
+    duration: 60 # how many seconds the effect will last before resolving
+    interval: 4 # how many seconds between wasp spawns
+    maxWasps: 3 # how many wasps spawn each interval
+  wave:
+    waveThickness: 18 # how many blocks "thick" the wave is
+    wavePeakHeight: 20 # how many blocks tall the wave is at its peak
+    waveSpread: 1 # how many blocks inwards the wave moves per interval
+    waveSpeed: 4 # how often the wave spreads (in ticks)
+    waveStrength: 1 # how hard the wave pushes players
+    stopAtInnerRadius: false # whether the wave terminates at the inner radius of an arena, or follows through to the center.
+
+  sponsors:
+    active: false # enables spectator shop if true
+    perpetual: false # enables persistent currency across games if true

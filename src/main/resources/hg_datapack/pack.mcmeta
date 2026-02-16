@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "description": "Custom Loot for Hunger Games plugin",
+    "pack_format": 94,
+    "supported_formats": {
+      "min_inclusive": 71,
+      "max_inclusive": 94
+    },
+    "min_format": 71,
+    "max_format": 94
+  }
+}

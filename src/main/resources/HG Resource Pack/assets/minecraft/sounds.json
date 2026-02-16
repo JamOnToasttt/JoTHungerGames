@@ -1,0 +1,20 @@
+{
+  "jothungergames.hornofplenty_noteblocks_oldrecord": {
+    "sounds": [
+      {
+        "name": "jothungergames/hornofplenty_noteblocks_oldrecord",
+        "subtitle": "subtitles.jothungergames.hornofplenty_noteblocks_oldrecord",
+        "stream": true
+      }
+    ]
+  },
+  "jothungergames.bloodrain_1": {
+    "sounds": [
+      {
+        "name": "custom/bloodrain_1",
+        "subtitle": "subtitles.jothungergames.bloodrain_1",
+        "stream": true
+      }
+    ]
+  }
+}

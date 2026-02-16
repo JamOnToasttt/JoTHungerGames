@@ -1,0 +1,119 @@
+arenas:
+  examplearena_name: # copy all fields below this exactly when making a new arena
+    ## ARENA INFO
+    center: 0,100,0
+    world: world
+    type: SQUARE
+    radius: 3
+    height: 3
+    grace period length: 0
+    event broadcast: # Lets players know events like refills and border shrinkage are happening.
+      action bar: true # allows messages to pop up on players' action bar
+      sidebar: true # allows event timers to be displayed on the sidebar scoreboard
+
+    ## ENDGAME INFO
+    # WARNING: putting these endgame events at the same time as chest refills may not properly warn players, as the alerts will be overridden
+    world border: # shrinks the world border, killing players caught by the edge
+      #WARNING: only use on dedicated 1-map worlds, or if all players in a world will be in one game. The world border affects the
+      #entire world, and will kill any players outside the arena
+      active: false
+      start: 840 # seconds into the game that this event will trigger
+      duration: 60 # seconds that this event will last for
+      final radius: 10 # final border radius
+      random center: false # if set to true, will calculate a random block in the arena to centre the final border on
+    highlight players: # applies glowing to players, making them easier to find
+      active: false
+      start: 720 #seconds into the game that this event will trigger
+    enable locator bar: # applies glowing to players, making them easier to find
+      active: false
+      start: 780
+
+    ## LOBBY INFO
+    lobby:
+      center: 10,100,10
+      type: square
+      radius: 2
+      height: 3
+
+     ## PLAYERS INFO
+    players:
+      maximum: 24
+      #WARNING: duplicate spawns will break the plugin. Make sure each playerSpawn is unique (and within the arena)!
+      playerSpawns:
+        '1': 0,100,0 # number player spawns sequentially, following this format
+
+    ## SEGMENT EFFECTS
+    linked segment group:
+    effects:
+      # Set both CLOCK and FREEFORM to false if ensuring no segment effects trigger in a game
+      #WARNING: for clock to work, the number of active clock effects must be equal to or less than the number of segments in the linked group
+      #WARNING: sequence and clock are mutually exclusive. having both active at once will break the plugin
+      #Clock mode will activate effects in segment order
+      clock: false
+      clock start time: 20
+      clock duration override: 60 #DO NOT leave blank. a consistent time is required for clock mode to work. If left blank, a default of 60 is hard-coded
+      clock effects:
+        BEAST:
+          active: false
+          segments:
+        BLOOD_RAIN:
+          active: false
+          segments:
+        EXTREME_COLD:
+          active: false
+          segments:
+        FIRESTORM:
+          active: false
+          segments:
+        INSECTS:
+          active: false
+          segments:
+        JABBERJAYS:
+          active: false
+          segments:
+        LIGHTNING:
+          active: true
+          segments: 1,2 #list segments separated by commas
+        PARALYSING_FOG:
+          active: false
+          segments:
+        POISON_FLOWERS:
+          active: false
+          segments:
+        SPIDERS:
+          active: false
+          segments:
+        WASPS:
+          active: false
+          segments:
+        WAVE:
+          active: false
+          segments:
+      #WARNING: freeform and clock are mutually exclusive. having both active at once will break the plugin
+      #Sequence mode will activate effects separately according to their own timers, settable here or in the main config
+      freeform: false
+      freeform effects:
+        '1':
+          effect name: lightning
+          start time: 30 #seconds until effect starts
+          effect duration override: 60 #effect duration override, leave blank to use config value
+          segments: 1,2
+
+    ## CHESTS INFO
+    # When logging Chest coordinates, simply remove the "0.5" on the end
+    chests:
+      center:
+        refills:
+          '1': 540 # seconds into the game that this event will trigger. for multiple refills, add to this sequence following the same format (e.g: '2': 180 )
+        locations:
+          '1': 0,100,0
+      normal:
+        refills:
+          '1': 240
+        locations:
+          '1': 2,100,0
+      prime:
+        refills:
+          '1': 360
+        locations:
+          '1': -2,100,0

@@ -1,0 +1,38 @@
+name: JoTHungerGames
+version: '1.0.0'
+main: me.jamontoast.jothungergames.JoTHungerGames
+api-version: '1.21.11'
+authors: [JamOnToast]
+description: Minecraft plugin focused around the creation and implementation of survival games
+commands:
+  hgarena:
+    description: Prefix for commands dealing with arenas
+    usage: /<command> <start|stop|create|delete|list> [additional arguments]
+    aliases: [hga]
+    permission: hg.admin
+
+  hgsegmentGroup:
+    description: Prefix for commands that manage segment groups
+    usage: /<command> <create|delete|list> [additional arguments]
+    aliases: [hgsg]
+    permission: hg.admin
+
+  hgsegmentFill:
+    description: Fills a specific segment within a group with the chosen material.
+    usage: /<command> <segment group> <segment number> <block type> [layer]
+    aliases: [hgsf]
+    permission: hg.admin
+
+  hgsegmentEffect:
+    description: Activates or deactivates an effect within a segment.
+    usage: /<command> <segment group> <segment number> <effect command> <effect>
+    aliases: [hgse]
+    permission: hg.admin
+
+permissions:
+  hg.admin:
+    description: Admin permissions for JoTHungerGames
+    default: op
+  hg.user:
+    description: User permissions for JoTHungerGames
+    default: true
