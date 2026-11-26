@@ -615,7 +615,9 @@ public class ArenaManager {
             Player player = Bukkit.getPlayer(uuid);
             if (player == null || !player.isOnline()) continue;
 
-            player.getActivePotionEffects().clear();
+            for (PotionEffect effect : player.getActivePotionEffects()) {
+                player.removePotionEffect(effect.getType());
+            }
         }
         deregisterDeathListener(arenaName);
         deregisterPlayerRejoinHandler(arenaName);
@@ -776,7 +778,7 @@ public class ArenaManager {
         }
     }
     private void cancelTask(BukkitRunnable task) {
-        if (task != null && !task.isCancelled()) {
+        if (task != null) {
             try {
                 task.cancel();
             } catch (IllegalStateException e) {

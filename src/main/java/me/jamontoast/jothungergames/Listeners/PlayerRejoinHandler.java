@@ -122,7 +122,7 @@ public class PlayerRejoinHandler implements Listener {
 
         if (arenaData.getHighlightPlayersTask() != null) {
             if (arenaData.getGameTime() >= arenaData.getHighlightStartTime()) {
-                if (!player.getActivePotionEffects().contains(PotionEffectType.GLOWING)) {
+                if (!player.hasPotionEffect(PotionEffectType.GLOWING)) {
                     player.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Integer.MAX_VALUE, 1));
                     player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "You are now visible to your opponents!"));
                 }
