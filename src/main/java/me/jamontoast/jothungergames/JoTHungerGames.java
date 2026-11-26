@@ -275,46 +275,76 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
 
     private void loadLootTables() {
         try {
+            // Diagnostic: Check if datapack exists
+            for (World world : Bukkit.getWorlds()) {
+                File datapackFolder = new File(world.getWorldFolder(), "datapacks/hg_datapack");
+                File lootTableFolder = new File(datapackFolder, "data/hg_loot/loot_table");
+                getLogger().info("Checking datapack in world: " + world.getName());
+                getLogger().info("  Datapack folder exists: " + datapackFolder.exists());
+                getLogger().info("  Loot table folder exists: " + lootTableFolder.exists());
+                if (lootTableFolder.exists()) {
+                    File[] files = lootTableFolder.listFiles();
+                    if (files != null) {
+                        getLogger().info("  Loot table files found: " + files.length);
+                        for (File file : files) {
+                            getLogger().info("    - " + file.getName());
+                        }
+                    }
+                }
+            }
+
             NamespacedKey centerKey = new NamespacedKey("hg_loot", "center");
             getLogger().info("Loading loot table with key: " + centerKey);
             centerLootTable = Bukkit.getLootTable(centerKey);
             if (centerLootTable == null) {
-                getLogger().severe("Failed to load centerLootTable.");
+                getLogger().severe("Failed to load centerLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded centerLootTable!");
             }
 
             NamespacedKey centerRefillKey = new NamespacedKey("hg_loot", "center_refill");
             getLogger().info("Loading loot table with key: " + centerRefillKey);
             centerRefillLootTable = Bukkit.getLootTable(centerRefillKey);
             if (centerRefillLootTable == null) {
-                getLogger().severe("Failed to load centerRefillLootTable.");
+                getLogger().severe("Failed to load centerRefillLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded centerRefillLootTable!");
             }
 
             NamespacedKey normalKey = new NamespacedKey("hg_loot", "normal");
             getLogger().info("Loading loot table with key: " + normalKey);
             normalLootTable = Bukkit.getLootTable(normalKey);
             if (normalLootTable == null) {
-                getLogger().severe("Failed to load normalLootTable.");
+                getLogger().severe("Failed to load normalLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded normalLootTable!");
             }
 
             NamespacedKey normalRefillKey = new NamespacedKey("hg_loot", "normal_refill");
             getLogger().info("Loading loot table with key: " + normalRefillKey);
             normalRefillLootTable = Bukkit.getLootTable(normalRefillKey);
             if (normalRefillLootTable == null) {
-                getLogger().severe("Failed to load normalRefillLootTable.");
+                getLogger().severe("Failed to load normalRefillLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded normalRefillLootTable!");
             }
 
             NamespacedKey primeKey = new NamespacedKey("hg_loot", "prime");
             getLogger().info("Loading loot table with key: " + primeKey);
             primeLootTable = Bukkit.getLootTable(primeKey);
             if (primeLootTable == null) {
-                getLogger().severe("Failed to load primeLootTable.");
+                getLogger().severe("Failed to load primeLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded primeLootTable!");
             }
 
             NamespacedKey primeRefillKey = new NamespacedKey("hg_loot", "prime_refill");
             getLogger().info("Loading loot table with key: " + primeRefillKey);
             primeRefillLootTable = Bukkit.getLootTable(primeRefillKey);
             if (primeRefillLootTable == null) {
-                getLogger().severe("Failed to load primeRefillLootTable.");
+                getLogger().severe("Failed to load primeRefillLootTable - Bukkit.getLootTable returned null");
+            } else {
+                getLogger().info("Successfully loaded primeRefillLootTable!");
             }
         }catch (Exception e){
                 getLogger().severe("Error loading loot tables: " + e.getMessage());
