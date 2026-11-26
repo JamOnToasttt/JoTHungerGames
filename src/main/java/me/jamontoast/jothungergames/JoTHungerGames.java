@@ -86,11 +86,11 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
         extractDataPack();
 
 
-        // Load loot tables after reload
+        // Load loot tables after datapack reload completes
         Bukkit.getScheduler().runTaskLater(this, () -> {
             getLogger().info("Loading loot tables...");
             loadLootTables();
-        }, 20L); // 1 second after reload
+        }, 80L); // 4 seconds after reload to ensure datapacks are loaded
 
         segmentEffectManager = new SegmentEffectManager();
         arenaCommand = new ArenaCommand();
@@ -197,6 +197,17 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
                 }
             }
         }
+
+        // Reload datapacks so the server recognizes the new/updated datapack
+        Bukkit.getScheduler().runTask(this, () -> {
+            try {
+                getLogger().info("Reloading datapacks...");
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "minecraft:reload");
+                getLogger().info("Datapacks reloaded successfully");
+            } catch (Exception e) {
+                getLogger().warning("Failed to reload datapacks: " + e.getMessage());
+            }
+        });
     }
     // Deletes a directory and its contents recursively
     private boolean deleteDirectory(File directory) {
