@@ -349,6 +349,8 @@ public class ArenaData {
     }
     public void clearPlayerDeathTimes() {
         playerDeathTimes.clear();
+        totalDeadPlayers.clear();
+        deadPlayersByDay.clear();
     }
 
 
