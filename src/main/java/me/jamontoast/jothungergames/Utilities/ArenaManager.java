@@ -597,36 +597,16 @@ public class ArenaManager {
         if (arenaData.getTeleportCountdownTask() != null) {
             arenaData.getTeleportCountdownTask().cancel();
         }
-        if (arenaData.getSpawnLockTask() != null) {
-            arenaData.getSpawnLockTask().cancel();
-        }
-        if (arenaData.getSpawnLockMessageTask() != null) {
-            arenaData.getSpawnLockMessageTask().cancel();
-        }
-        if (arenaData.getDayEndCheckTask() != null) {
-            arenaData.getDayEndCheckTask().cancel();
-        }
-        if (arenaData.getFallenDisplayTask() != null) {
-            arenaData.getFallenDisplayTask().cancel();
-        }
-        if (arenaData.getGracePeriodTask() != null) {
-            arenaData.getGracePeriodTask().cancel();
-        }
-        if (arenaData.getBorderShrinkTask() != null) {
-            arenaData.getBorderShrinkTask().cancel();
-        }
-        if (arenaData.getHighlightPlayersTask() != null) {
-            arenaData.getHighlightPlayersTask().cancel();
-        }
-        if (arenaData.getLocatorBarTask() != null) {
-            arenaData.getLocatorBarTask().cancel();
-        }
-        if (arenaData.getGameTimerTask() != null) {
-            arenaData.getGameTimerTask().cancel();
-        }
-        if (arenaData.getEventTimerTask() != null) {
-            arenaData.getEventTimerTask().cancel();
-        }
+        cancelTask(arenaData.getSpawnLockTask());
+        cancelTask(arenaData.getSpawnLockMessageTask());
+        cancelTask(arenaData.getDayEndCheckTask());
+        cancelTask(arenaData.getFallenDisplayTask());
+        cancelTask(arenaData.getGracePeriodTask());
+        cancelTask(arenaData.getBorderShrinkTask());
+        cancelTask(arenaData.getHighlightPlayersTask());
+        cancelTask(arenaData.getLocatorBarTask());
+        cancelTask(arenaData.getGameTimerTask());
+        cancelTask(arenaData.getEventTimerTask());
         stopEffectTasks(arenaName);
         stopRefillTasks(arenaName);
 
@@ -791,13 +771,17 @@ public class ArenaManager {
 
         for (Long startTime : arenaData.getEffectStartTasks().keySet()) {
             for (BukkitRunnable task : arenaData.getEffectStartTasks().get(startTime)) {
-                task.cancel();
+                cancelTask(task);
             }
         }
     }
     private void cancelTask(BukkitRunnable task) {
         if (task != null && !task.isCancelled()) {
-            task.cancel();
+            try {
+                task.cancel();
+            } catch (IllegalStateException e) {
+                // Task was never scheduled, ignore
+            }
         }
     }
     private void dayEndChecker(String arenaName) {
