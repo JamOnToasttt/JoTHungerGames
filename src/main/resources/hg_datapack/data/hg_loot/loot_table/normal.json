@@ -3,6 +3,7 @@
   "pools": [
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": 3
       },
@@ -11,9 +12,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wooden_sword",
           "weight": 55,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Broken Wooden Sword",
@@ -29,9 +30,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wooden_spear",
           "weight": 35,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Broken Wooden Spear",
@@ -47,9 +48,9 @@
           "type": "minecraft:item",
           "name": "minecraft:wooden_axe",
           "weight": 35,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Broken Wooden Axe",
@@ -65,9 +66,9 @@
           "type": "minecraft:item",
           "name": "minecraft:leather_helmet",
           "weight": 55,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tattered Leather Cap",
@@ -83,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:leather_chestplate",
           "weight": 45,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tattered Leather Tunic",
@@ -101,9 +102,9 @@
           "type": "minecraft:item",
           "name": "minecraft:leather_leggings",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tattered Leather Pants",
@@ -122,9 +123,9 @@
               "type": "minecraft:item",
               "name": "minecraft:leather_boots",
               "weight": 55,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:damage": 23,
                     "minecraft:custom_name": {
@@ -155,9 +156,9 @@
               "type": "minecraft:item",
               "name": "minecraft:leather_boots",
               "weight": 55,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:custom_name": {
                       "text": "Tattered Leather Boots",
@@ -175,9 +176,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stone_sword",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Chipped Stone Sword",
@@ -193,9 +194,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stone_spear",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Chipped Stone Spear",
@@ -211,9 +212,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stone_axe",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Chipped Stone Axe",
@@ -229,9 +230,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_sword",
           "weight": 40,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Sword",
@@ -247,9 +248,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_spear",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Spear",
@@ -265,9 +266,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_axe",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Axe",
@@ -283,9 +284,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_helmet",
           "weight": 40,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Helmet",
@@ -301,9 +302,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_chestplate",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Chestplate",
@@ -319,9 +320,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_leggings",
           "weight": 35,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Leggings",
@@ -337,9 +338,9 @@
           "type": "minecraft:item",
           "name": "minecraft:golden_boots",
           "weight": 40,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Tarnished Golden Boots",
@@ -355,9 +356,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_sword",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Sword",
@@ -373,9 +374,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_spear",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Spear",
@@ -391,9 +392,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_axe",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Axe",
@@ -409,9 +410,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_helmet",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Chainmail Helmet",
@@ -427,9 +428,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_chestplate",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Chainmail Chestplate",
@@ -445,9 +446,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_leggings",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Chainmail Leggings",
@@ -463,9 +464,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_boots",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Chainmail Boots",
@@ -481,9 +482,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Helmet",
@@ -499,9 +500,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_leggings",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Leggings",
@@ -517,9 +518,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_boots",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Rusted Iron Boots",
@@ -535,9 +536,9 @@
           "type": "minecraft:item",
           "name": "minecraft:shield",
           "weight": 15,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Splintered Shield",
@@ -553,9 +554,9 @@
           "type": "minecraft:item",
           "name": "minecraft:trident",
           "weight": 15,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Corroded Trident",
@@ -576,9 +577,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bow",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Frayed Bow",
@@ -594,9 +595,9 @@
           "type": "minecraft:item",
           "name": "minecraft:crossbow",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Weathered Crossbow",
@@ -607,7 +608,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:quick_charge": 1
@@ -626,9 +627,9 @@
           "type": "minecraft:item",
           "name": "minecraft:arrow",
           "weight": 35,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 6
@@ -640,9 +641,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_sword",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sword of Champions",
@@ -654,7 +655,7 @@
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 3,
@@ -673,6 +674,7 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
+        "type": "minecraft:uniform",
         "min": 0,
         "max": {
           "min": 0,
@@ -684,9 +686,9 @@
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
           "weight": 200,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 4
@@ -698,9 +700,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 2
@@ -712,9 +714,9 @@
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
           "weight": 150,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 3
@@ -726,9 +728,9 @@
           "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
           "weight": 250,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 4
@@ -740,9 +742,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 100,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 3
@@ -754,9 +756,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stick",
           "weight": 250,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 3
@@ -768,6 +770,7 @@
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": {
           "min": 1,

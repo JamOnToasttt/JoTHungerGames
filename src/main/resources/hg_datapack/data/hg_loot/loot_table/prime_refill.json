@@ -3,6 +3,7 @@
   "pools": [
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": 2
       },
@@ -11,9 +12,9 @@
           "type": "minecraft:item",
           "name": "minecraft:trident",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:loyalty": 3,
@@ -41,9 +42,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_leggings",
           "weight": 5,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:protection": 1,
@@ -62,9 +63,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_chestplate",
           "weight": 5,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:protection": 1,
@@ -83,9 +84,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_sword",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 2
@@ -97,7 +98,7 @@
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 1,
@@ -111,9 +112,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_spear",
           "weight": 8,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:fire_aspect": 2
@@ -126,7 +127,7 @@
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 1,
@@ -144,9 +145,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_chestplate",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": 2
               }
@@ -157,9 +158,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_leggings",
           "weight": 12,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": 2
               }
@@ -178,9 +179,9 @@
               "type": "minecraft:item",
               "name": "minecraft:bow",
               "weight": 12,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:enchantments": {
                       "minecraft:power": 4,
@@ -201,16 +202,16 @@
               "type": "minecraft:item",
               "name": "minecraft:tipped_arrow",
               "weight": 12,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_count",
+                  "type": "minecraft:set_count",
                   "count": {
                     "min": 3,
                     "max": 7
                   }
                 },
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:potion_contents": {
                       "potion": "minecraft:strong_poison",
@@ -232,9 +233,9 @@
           "type": "minecraft:item",
           "name": "minecraft:leather_boots",
           "weight": 4,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:attribute_modifiers": [
                   {
@@ -266,9 +267,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_sword",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sword of Champions",
@@ -280,7 +281,7 @@
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 3,
@@ -302,9 +303,9 @@
           "type": "minecraft:item",
           "name": "minecraft:slime_ball",
           "weight": 10,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:knockback": 10
@@ -333,9 +334,9 @@
               "type": "minecraft:item",
               "name": "minecraft:crossbow",
               "weight": 7,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:custom_name": {
                       "text": "Tranquilizer Gun",
@@ -386,9 +387,9 @@
               "type": "minecraft:item",
               "name": "minecraft:tipped_arrow",
               "weight": 7,
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:potion_contents": {
                       "potion": "minecraft:strong_slowness",
@@ -412,7 +413,7 @@
                   }
                 },
                 {
-                  "function": "minecraft:set_count",
+                  "type": "minecraft:set_count",
                   "count": {
                     "min": 2,
                     "max": 4
@@ -427,6 +428,7 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
+        "type": "minecraft:uniform",
         "min": 0,
         "max": {
           "min": 0,
@@ -438,9 +440,9 @@
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
           "weight": 150,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 4,
                 "max": 8
@@ -452,9 +454,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond",
           "weight": 115,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 3
@@ -466,9 +468,9 @@
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
           "weight": 150,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 3,
                 "max": 6
@@ -480,9 +482,9 @@
           "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
           "weight": 300,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 4,
                 "max": 10
@@ -494,9 +496,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 175,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 4,
                 "max": 8
@@ -508,6 +510,7 @@
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": 2
       },

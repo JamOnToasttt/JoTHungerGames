@@ -3,6 +3,7 @@
   "pools": [
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": 3
       },
@@ -18,9 +19,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_helmet",
           "weight": 70,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -29,7 +30,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Polished Chainmail Helmet",
@@ -44,9 +45,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_chestplate",
           "weight": 60,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -55,7 +56,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Polished Chainmail Chestplate",
@@ -70,9 +71,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_leggings",
           "weight": 65,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -81,7 +82,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Polished Chainmail Leggings",
@@ -96,9 +97,9 @@
           "type": "minecraft:item",
           "name": "minecraft:chainmail_boots",
           "weight": 70,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -107,7 +108,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Polished Chainmail Boots",
@@ -122,9 +123,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -133,7 +134,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Pitted Iron Helmet",
@@ -149,9 +150,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_leggings",
           "weight": 45,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -160,7 +161,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Pitted Iron Leggings",
@@ -176,9 +177,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_boots",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -187,7 +188,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Pitted Iron Boots",
@@ -203,9 +204,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_helmet",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -214,7 +215,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Scratched Diamond Helmet",
@@ -230,9 +231,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_boots",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:protection": {
                   "min": 0,
@@ -241,7 +242,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Scratched Diamond Boots",
@@ -257,9 +258,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_sword",
           "weight": 45,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 0,
@@ -268,7 +269,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sharpened Iron Sword",
@@ -283,9 +284,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_spear",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 0,
@@ -298,7 +299,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sharpened Iron Spear",
@@ -313,9 +314,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_axe",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 0,
@@ -324,7 +325,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sharpened Iron Axe",
@@ -339,9 +340,9 @@
           "type": "minecraft:item",
           "name": "minecraft:trident",
           "weight": 35,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:loyalty": 3,
@@ -360,9 +361,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_sword",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Fractured Diamond Sword",
@@ -386,9 +387,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_spear",
           "weight": 15,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:lunge": {
                   "min": 1,
@@ -397,7 +398,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Fractured Diamond Spear",
@@ -421,9 +422,9 @@
           "type": "minecraft:item",
           "name": "minecraft:shield",
           "weight": 30,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Reinforced Shield",
@@ -446,9 +447,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bow",
           "weight": 60,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:power": {
                   "min": 0,
@@ -457,7 +458,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Charred Bow",
@@ -476,9 +477,9 @@
           "type": "minecraft:item",
           "name": "minecraft:crossbow",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Freshly Oiled Modified Crossbow",
@@ -493,7 +494,7 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:charged_projectiles": [
                   {
@@ -568,9 +569,9 @@
           "type": "minecraft:item",
           "name": "minecraft:spectral_arrow",
           "weight": 60,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 6
@@ -582,9 +583,9 @@
           "type": "minecraft:item",
           "name": "minecraft:firework_rocket",
           "weight": 25,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:fireworks": {
                   "flight_duration": 3,
@@ -646,9 +647,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_chestplate",
           "weight": 40,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:protection": 1
@@ -666,9 +667,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_chestplate",
           "weight": 15,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Fractured Diamond Chestplate",
@@ -684,9 +685,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_leggings",
           "weight": 20,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Fractured Diamond Leggings",
@@ -702,9 +703,9 @@
           "type": "minecraft:item",
           "name": "minecraft:bow",
           "weight": 7,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantments": {
                   "minecraft:power": 3,
@@ -725,9 +726,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond_sword",
           "weight": 2,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_name": {
                   "text": "Sword of Champions",
@@ -739,7 +740,7 @@
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:sharpness": {
                   "min": 3,
@@ -757,9 +758,9 @@
           "type": "minecraft:item",
           "name": "minecraft:leather_boots",
           "weight": 4,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:attribute_modifiers": [
                   {
@@ -792,6 +793,7 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
+        "type": "minecraft:uniform",
         "min": 0,
         "max": {
           "min": 0,
@@ -803,9 +805,9 @@
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
           "weight": 200,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 4,
                 "max": 6
@@ -817,9 +819,9 @@
           "type": "minecraft:item",
           "name": "minecraft:diamond",
           "weight": 50,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 3
@@ -831,9 +833,9 @@
           "type": "minecraft:item",
           "name": "minecraft:lapis_lazuli",
           "weight": 150,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 4
@@ -845,9 +847,9 @@
           "type": "minecraft:item",
           "name": "minecraft:experience_bottle",
           "weight": 250,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 4,
                 "max": 6
@@ -859,9 +861,9 @@
           "type": "minecraft:item",
           "name": "minecraft:iron_ingot",
           "weight": 100,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 2,
                 "max": 4
@@ -873,9 +875,9 @@
           "type": "minecraft:item",
           "name": "minecraft:stick",
           "weight": 250,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 3
@@ -887,6 +889,7 @@
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": {
           "min": 1,
