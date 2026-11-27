@@ -278,9 +278,19 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
             // Diagnostic: Check if datapack exists
             for (World world : Bukkit.getWorlds()) {
                 File datapackFolder = new File(world.getWorldFolder(), "datapacks/hg_datapack");
+                File packMcmeta = new File(datapackFolder, "pack.mcmeta");
                 File lootTableFolder = new File(datapackFolder, "data/hg_loot/loot_table");
                 getLogger().info("Checking datapack in world: " + world.getName());
                 getLogger().info("  Datapack folder exists: " + datapackFolder.exists());
+                getLogger().info("  pack.mcmeta exists: " + packMcmeta.exists());
+                if (packMcmeta.exists()) {
+                    try {
+                        String content = new String(java.nio.file.Files.readAllBytes(packMcmeta.toPath()));
+                        getLogger().info("  pack.mcmeta content: " + content);
+                    } catch (Exception e) {
+                        getLogger().warning("  Could not read pack.mcmeta: " + e.getMessage());
+                    }
+                }
                 getLogger().info("  Loot table folder exists: " + lootTableFolder.exists());
                 if (lootTableFolder.exists()) {
                     File[] files = lootTableFolder.listFiles();
