@@ -83,7 +83,7 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
         verifyResourceInJar("hg_datapack");
 
         setupLootTables();
-        extractDataPack();
+        extractDataPackIfNeeded(); // Only extract if doesn't exist
 
 
         // Load loot tables after datapack reload completes
@@ -151,19 +151,24 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
         }
     }
 
-    private void extractDataPack() {
+    private void extractDataPackIfNeeded() {
+        boolean needsRestart = false;
+
         for (World world : Bukkit.getWorlds()) {
             File datapackFolder = new File(world.getWorldFolder(), "datapacks/hg_datapack");
+            File packMcmetaFile = new File(datapackFolder, "pack.mcmeta");
 
-            // Delete and recreate datapack
-            if (datapackFolder.exists()) {
-                if (!deleteDirectory(datapackFolder)) {
-                    getLogger().warning("Failed to delete existing datapack folder");
-                    continue;
+            // Only extract if datapack doesn't exist
+            if (!packMcmetaFile.exists()) {
+                getLogger().warning("========================================");
+                getLogger().warning("FIRST-TIME DATAPACK SETUP FOR: " + world.getName());
+                getLogger().warning("========================================");
+                needsRestart = true;
+
+                if (!datapackFolder.exists()) {
+                    datapackFolder.mkdirs();
                 }
-            }
 
-            if (datapackFolder.mkdirs()) {
                 copyResourceDirectory("hg_datapack", datapackFolder);
 
                 // ✅ Copy loot tables FROM plugin folder TO datapack
@@ -198,16 +203,14 @@ public final class JoTHungerGames extends JavaPlugin implements Listener{
             }
         }
 
-        // Reload datapacks so the server recognizes the new/updated datapack
-        Bukkit.getScheduler().runTask(this, () -> {
-            try {
-                getLogger().info("Reloading datapacks...");
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "minecraft:reload");
-                getLogger().info("Datapacks reloaded successfully");
-            } catch (Exception e) {
-                getLogger().warning("Failed to reload datapacks: " + e.getMessage());
-            }
-        });
+        if (needsRestart) {
+            getLogger().warning("========================================");
+            getLogger().warning("DATAPACK INSTALLED - RESTART REQUIRED!");
+            getLogger().warning("HG datapack has been extracted for the first time.");
+            getLogger().warning("Please RESTART the server for Minecraft to recognize it.");
+            getLogger().warning("Loot tables will NOT work until after restart!");
+            getLogger().warning("========================================");
+        }
     }
     // Deletes a directory and its contents recursively
     private boolean deleteDirectory(File directory) {
